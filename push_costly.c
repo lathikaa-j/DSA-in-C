@@ -52,20 +52,3 @@ int main()
     printf("Popped element is %d\n", pop());
     printf("Popped element is %d\n", pop());
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
