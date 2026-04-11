@@ -65,6 +65,32 @@ void reset()
     for(int i=0;i<n;i++)
         visited[i]=0;
 }
+void pMatrix()
+{
+    for (int i=0; i<n;i++)
+    {
+        for(int j=0; j<n; j++)
+        {
+            printf("%d  ", adjM[i][j]);
+        }
+        printf("\n");
+    }
+}
+void pList()
+{
+    printf("Adjacency List\n");
+    for(int i=0;i<n;i++)
+    {
+        printf("%d-> ", i);
+        struct node *temp = adjL[i];
+        while(temp!=NULL)
+        {
+            printf("%d-> ", temp->v);
+            temp = temp->next;
+        }
+        printf("NULL\n");
+    }
+}
 int main()
 {
     int ch, s,d,start;
@@ -77,7 +103,7 @@ int main()
         for(int j=0; j<n;j++)
             adjM[i][j]=0;
     }
-    printf("Enter 1 for add edge , 2 for DFS, 3 for BFS\n");
+    printf("Enter 1 for add edge , 2 for DFS, 3 for BFS, 4 for display\n");
     while(1)
     {
         printf("Enter choice ");
@@ -103,6 +129,10 @@ int main()
                 printf("BFS\n");
                 BFS(start);
                 break;
+            case 4:
+                printf("Adjacency Matrix\n");
+                pMatrix();
+                pList();
         }
     }
 }
