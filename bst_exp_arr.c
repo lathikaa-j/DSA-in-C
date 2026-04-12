@@ -3,9 +3,6 @@
 
 int bst[100];
 char exp[100];
-
-/* -------- BST FUNCTIONS -------- */
-
 void insert(int x)
 {
     int i=1;
@@ -18,7 +15,6 @@ void insert(int x)
     }
     bst[i]=x;
 }
-
 void search(int x)
 {
     int i=1;
@@ -66,8 +62,6 @@ void inorder(int i)
     }
 }
 
-/* -------- EXPRESSION TREE -------- */
-
 void create_exp()
 {
     char postfix[50];
@@ -102,8 +96,6 @@ void delete_exp()
     exp[pos]=0;
     printf("Node Deleted\n");
 }
-
-/* -------- MAIN -------- */
 
 int main()
 {
